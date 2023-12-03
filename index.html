@@ -100,7 +100,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Programming</h5>
-              <canvas id="programmingChart" width="200" height="200"></canvas>
+              <canvas id="programmingChart" width="400" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Machine Learning Frameworks</h5>
-              <canvas id="mlChart" width="200" height="200"></canvas>
+              <canvas id="mlChart" width="400" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Natural Language Processing</h5>
-              <canvas id="nlpChart" width="200" height="200"></canvas>
+              <canvas id="nlpChart" width="400" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Deep Learning</h5>
-              <canvas id="deepLearningChart" width="200" height="200"></canvas>
+              <canvas id="deepLearningChart" width="400" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Data Manipulation and Visualization</h5>
-              <canvas id="dataVizChart" width="200" height="200"></canvas>
+              <canvas id="dataVizChart" width="400" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">MLOps</h5>
-              <canvas id="mlopsChart" width="200" height="200"></canvas>
+              <canvas id="mlopsChart" width="400" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Cloud Platforms</h5>
-              <canvas id="cplatforms" width="200" height="200"></canvas>
+              <canvas id="cplatforms" width="400" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Big Data Tools</h5>
-              <canvas id="bigDataTools" width="200" height="200"></canvas>
+              <canvas id="bigDataTools" width="400" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -257,8 +257,8 @@
     // Language Proficiency Progress
     document.addEventListener('DOMContentLoaded', function () {
       updateProgressBar('englishProgress', 80); // Adjust the proficiency percentage
-      updateProgressBar('germanProgress', 15); // Adjust the proficiency percentage
-      updateProgressBar('banglaProgress', 95); // Adjust the proficiency percentage
+      updateProgressBar('germanProgress', 30); // Adjust the proficiency percentage
+      updateProgressBar('banglaProgress', 100); // Adjust the proficiency percentage
 
       // Move your Chart.js code inside this onload event
       window.onload = function () {
@@ -333,7 +333,7 @@
             legend: {
               position: 'top',
             },
-            responsive: true,
+            responsive: false,
             maintainAspectRatio: true,
           },
         };
