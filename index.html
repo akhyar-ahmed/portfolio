@@ -7,9 +7,21 @@
   <title>Akhyar's Portfolio</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .content {
+      flex: 1;
+    }
+  </style>
 </head>
 
 <body>
@@ -18,160 +30,359 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Akhyar Ahmed</a>
+      <!-- Toggler button for mobile navigation -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Navigation Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#publications">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#publications">Recommendations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#publications">Certifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#publications">Achievements</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#publications">Contacts</a>
-          </li>
+          <!-- Replace "#" with the appropriate section IDs in your actual page -->
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#recommendations">Recommendations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
+        <!-- Social Media Icons -->
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/ak-ahmed/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/akhyar-ahmed" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.discordapp.com/users/718133096830206014/" target="_blank">
-              <i class="fab fa-discord"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/_croods_/" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/ak-ahmed/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/akhyar-ahmed" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.discordapp.com/users/718133096830206014/" target="_blank"><i class="fab fa-discord"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/_croods_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container text-center">
-      <h1 class="display-4">Data Enigma Unveiled</h1>
-      <p class="lead">Turning data chaos into actionable intelligence!</p>
-      <!-- Add your photo here -->
-      <img src="resources/profile_pic.jpeg" alt="Your Photo" class="img-fluid rounded-circle" style="width: 200px; height: 200px;">
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center">Projects</h2>
-      <!-- Add your project cards here -->
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="project1.jpg" class="card-img-top" alt="Project 1">
-            <div class="card-body d-flex justify-content-between">
-              <div>
-                <h5 class="card-title">Project 1</h5>
-                <p class="card-text">A brief description of Project 1.</p>
-              </div>
-              <button class="btn btn-primary" onclick="runDemo('project1')">Demo</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4"> <!-- Ensure each card has its own col-md-4 -->
-          <div class="card mb-4">
-            <img src="project2.jpg" class="card-img-top" alt="Project 2">
-            <div class="card-body d-flex justify-content-between">
-              <div>
-                <h5 class="card-title">Project 2</h5>
-                <p class="card-text">A brief description of Project 2.</p>
-              </div>
-              <button class="btn btn-primary" onclick="runDemo('project2')">Demo</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4"> <!-- Ensure each card has its own col-md-4 -->
-          <div class="card mb-4">
-            <img src="project2.jpg" class="card-img-top" alt="Project 3">
-            <div class="card-body d-flex justify-content-between">
-              <div>
-                <h5 class="card-title">Project 3</h5>
-                <p class="card-text">A brief description of Project 3.</p>
-              </div>
-              <button class="btn btn-primary" onclick="runDemo('project2')">Demo</button>
-            </div>
-          </div>
-        </div>
-        <!-- Add more project cards as needed -->
+  <div class="content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container text-center">
+        <h1 class="display-4">Data Enigma Unveiled</h1>
+        <p class="lead">Turning data chaos into actionable intelligence!</p>
+        <!-- Add your photo here -->
+        <img src="resources/profile_pic.jpeg" alt="Your Photo" class="img-fluid rounded-circle" style="width: 200px; height: 200px;">
       </div>
-    </div>
-  </section>
+    </section>
 
-  
+    <!-- About Me Section -->
+    <section id="about" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center">About Me</h2>
+        <p class="text-justify">
+          Greetings! I am Akhyar Ahmed, currently residing in Germany for the past four enriching years. Originally hailing from the vibrant city of Sylhet, Bangladesh, my journey in the field of Computer Science and Engineering began at Leading University, Sylhet, where I completed my bachelor's degree.
+          My professional voyage commenced with a four-month stint as a backend developer in an IT firm.
+        </p>
+        <p class="text-justify">
+          Following this, I ventured into academia, joining Leading University as a faculty member. In 2019, I embarked on a new chapter by moving to Germany to pursue a Master's in Data Science at the University of Potsdam. Throughout my master's program, I delved deep into the realms of Data Science, acquiring expertise in Statistical Data Analysis, Advanced Machine Learning, Bayesian Inference, Advanced NLP, and more. The academic rigors were complemented by practical experiences, as evidenced by my four years of research and work at DFKI (The German Research Institute of Artificial Intelligence).
+        </p>
+        <p class="text-justify">
+          Within the realm of Natural Language Processing (NLP), I have witnessed the power of language in bridging the gap between humans and machines. Advanced NLP applications, such as Dialogue Systems, have been a focal point of my research at DFKI. The ability to create systems that can understand, interpret, and respond to human language is not just a technical feat but a profound stride toward human-computer interaction.
+        </p>
+        <p class="text-justify">
+          My portfolio reflects diverse endeavors, showcasing my proficiency in NLP, Computer Vision, Cognitive Science, and Prompt engineering. One notable highlight of my academic journey includes contributing to international publications, with one of my papers being published in ACL, a prestigious conference in the world of Natural Language Processing (NLP).
+        </p>
+        <p class="text-justify">
+          I am passionate about leveraging technology to unravel the complexities of data, and my journey so far has been a testament to continuous learning and exploration in the ever-evolving landscape of Data Science.
+        </p>
+      </div>
+    </section>
 
-  <!-- Publications Section -->
-  <section id="publications" class="py-5">
-    <div class="container">
-      <h2 class="text-center">Publications</h2>
-      <!-- Add your publication details here -->
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="container mt-5">
+      <h2 class="text-center mb-4">Technical Skills</h2>
+      <!-- Skill Cards -->
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Programming Skills Card -->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Programming</h5>
+              <canvas id="programmingChart" width="200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
 
-  <!-- About Me Section -->
-  <section id="about" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center">About Me</h2>
-      <!-- Add your about me content here -->
-    </div>
-  </section>
+        <!-- Machine Learning Skills Card -->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Machine Learning</h5>
+              <canvas id="mlChart" width="200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="text-center">Contact</h2>
-      <!-- Add your contact form or details here -->
-    </div>
+        <!-- Natural Language Processing Skills Card -->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Natural Language Processing</h5>
+              <canvas id="nlpChart" width="200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Learning Skills Card -->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Deep Learning</h5>
+              <canvas id="deepLearningChart" width="200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Manipulation and Visualization Skills Card -->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Data Manipulation and Visualization</h5>
+              <canvas id="dataVizChart" width="200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- MLOps Skills Card -->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">MLOps</h5>
+              <canvas id="mlopsChart" width="200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud Platforms -->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cloud Platforms</h5>
+              <canvas id="cplatforms" width="200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Big Data Tools Skills Card -->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Big Data Tools</h5>
+              <canvas id="bigDataTools" width="200" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Language Proficiency Section -->
+    <section id="language" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center">Language Proficiency</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-4 text-center mb-3">
+            <h5>Bangla</h5>
+            <div class="progress">
+              <div id="banglaProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+            <p class="mt-2">Native</p>
+          </div>
+          <div class="col-md-4 text-center mb-3">
+            <h5>English</h5>
+            <div class="progress">
+              <div id="englishProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+            <p class="mt-2">Business Proficient</p>
+          </div>
+          <div class="col-md-4 text-center mb-3">
+            <h5>German</h5>
+            <div class="progress">
+              <div id="germanProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+            <p class="mt-2">Beginner</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Contact -->
+    <section class="mb-4">
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
+
+      <!-- Section description -->
+      <p class="text-center w-responsive mx-auto mb-5">Whether you have questions or just want to connect, I'm here and ready to assist you!</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <ul class="list-unstyled d-flex justify-content-between mb-0">
+            <li class="text-center">
+              <i class="fas fa-map-marker-alt mt-4 fa-2x"></i>
+              <p class="mt-2">Karl-Liebknecht-Straße 17A, 14476, Potsdam, Germany</p>
+            </li>
+      
+            <li class="text-center">
+              <i class="fas fa-phone mt-4 fa-2x"></i>
+              <p class="mt-2">+49 1765 8889489</p>
+            </li>
+      
+            <li class="text-center">
+              <i class="fas fa-envelope mt-4 fa-2x"></i>
+              <p class="mt-2">nuhasahmed007@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+      </div>
   </section>
+</div>
 
   <!-- Footer Section -->
   <footer class="bg-dark text-light text-center py-3">
     <div class="container">
-      <p>&copy; 2023 Akhyar Ahmed. All Rights Reserved.</p>
+      <p>&copy; 2024 Akhyar Ahmed. All Rights Reserved.</p>
     </div>
   </footer>
-
 
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Your Custom JavaScript -->
   <script>
-    // Function to run project demo
-    function runDemo(projectName) {
-      alert(`Running demo for ${projectName}`);
-      // Add your demo logic here
+    // Language Proficiency Progress
+    document.addEventListener('DOMContentLoaded', function () {
+      updateProgressBar('englishProgress', 80); // Adjust the proficiency percentage
+      updateProgressBar('germanProgress', 15); // Adjust the proficiency percentage
+      updateProgressBar('banglaProgress', 95); // Adjust the proficiency percentage
+
+      // Move your Chart.js code inside this onload event
+      window.onload = function () {
+        // Data for the charts
+        var programmingData = {
+          labels: ["Python", "SQL", "Java", "C++"],
+          datasets: [{
+            data: [95, 80, 90, 60],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
+          }]
+        };
+        var mlData = {
+          labels: ["Scikit-learn", "PyTorch", "TensorFlow", "XGBoost"],
+          datasets: [{
+            data: [90, 90, 65, 50],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#9966FF"],
+          }]
+        };
+
+        var nlpData = {
+          labels: ["NLTK", "SpaCy", "Gensim", "Huggingface models"],
+          datasets: [{
+            data: [90, 60, 55, 90],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
+          }]
+        };
+
+        var deepLearningData = {
+          labels: ["CNN", "RNN", "LSTM", "GAN", "Autoencoders"],
+          datasets: [{
+            data: [90, 70, 90, 55, 55],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
+          }]
+        };
+
+        var dataVizData = {
+          labels: ["Pandas", "Numpy", "Matplotlib", "Seaborn", "ggplot2"],
+          datasets: [{
+            data: [95, 95, 90, 90, 50],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
+          }]
+        };
+
+        var mlopsData = {
+          labels: ["Containerization", "Gradio", "Weights & Biases", "Amazon SageMaker"],
+          datasets: [{
+            data: [95, 70, 50, 40],
+            backgroundColor: ["#4BC0C0", "#FF6384", "#36A2EB", "#FFCE56"],
+          }]
+        };
+
+        var cplatformData = {
+          labels: ["AWS (S3, Lambda, ECR)", "GCP (Dialogflow)"],
+          datasets: [{
+            data: [90, 40],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+          }]
+        };
+
+        var bigDataToolsData = {
+          labels: ["Apache Hadoop", "Apache Spark", "Hive"],
+          datasets: [{
+            data: [90, 50, 40],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          }]
+        };
+
+        // Chart configurations
+        var chartConfig = {
+          type: 'pie',
+          options: {
+            legend: {
+              position: 'top',
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+          },
+        };
+
+        // Create charts
+        var programmingChart = new Chart(document.getElementById("programmingChart"), Object.assign({}, chartConfig, {
+          data: programmingData,
+        }));
+
+        var mlChart = new Chart(document.getElementById("mlChart"), Object.assign({}, chartConfig, {
+          data: mlData,
+        }));
+
+        var nlpChart = new Chart(document.getElementById("nlpChart"), Object.assign({}, chartConfig, {
+          data: nlpData,
+        }));
+
+        var deepLearningChart = new Chart(document.getElementById("deepLearningChart"), Object.assign({}, chartConfig, {
+          data: deepLearningData,
+        }));
+
+        var dataVizChart = new Chart(document.getElementById("dataVizChart"), Object.assign({}, chartConfig, {
+          data: dataVizData,
+        }));
+
+        var mlopsChart = new Chart(document.getElementById("mlopsChart"), Object.assign({}, chartConfig, {
+          data: mlopsData,
+        }));
+
+        var cplatformChart = new Chart(document.getElementById("cplatforms"), Object.assign({}, chartConfig, {
+          data: cplatformData,
+        }));
+
+        var bigDataToolsChart = new Chart(document.getElementById("bigDataTools"), Object.assign({}, chartConfig, {
+          data: bigDataToolsData,
+        }));
+
+      };
+    });
+
+    function updateProgressBar(id, value) {
+      var progressBar = document.getElementById(id);
+      progressBar.style.width = value + '%';
+      progressBar.innerHTML = value + '%';
     }
+
   </script>
 
 </body>
 
 </html>
+  
