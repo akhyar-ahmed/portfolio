@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akhyar's Portfolio</title>
@@ -11,17 +12,11 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  <!-- Include External JavaScript Script -->
+  <script src="resources/scripts/home-script.js" defer></script>
+  <!-- Include External CSS -->
+  <link rel="stylesheet" href="resources/stylesheets/home-css.css">
 
-    .content {
-      flex: 1;
-    }
-  </style>
 </head>
 
 <body>
@@ -110,7 +105,7 @@
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Machine Learning Frameworks</h5>
+              <h5 class="card-title">Machine Learning and Frameworks</h5>
               <canvas id="mlChart" width="400" height="400"></canvas>
             </div>
           </div>
@@ -303,132 +298,7 @@
 
   <!-- Your Custom JavaScript -->
   <script>
-    // Language Proficiency Progress
-    document.addEventListener('DOMContentLoaded', function () {
-      updateProgressBar('englishProgress', 80); // Adjust the proficiency percentage
-      updateProgressBar('germanProgress', 30); // Adjust the proficiency percentage
-      updateProgressBar('banglaProgress', 100); // Adjust the proficiency percentage
-
-      // Move your Chart.js code inside this onload event
-      window.onload = function () {
-        // Data for the charts
-        var programmingData = {
-          labels: ["Python", "SQL", "Java", "C++"],
-          datasets: [{
-            data: [95, 80, 90, 60],
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
-          }]
-        };
-        var mlData = {
-          labels: ["Scikit-learn", "PyTorch", "TensorFlow", "XGBoost"],
-          datasets: [{
-            data: [90, 90, 65, 50],
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#9966FF"],
-          }]
-        };
-
-        var nlpData = {
-          labels: ["NLTK", "SpaCy", "Gensim", "Huggingface models"],
-          datasets: [{
-            data: [90, 60, 55, 90],
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
-          }]
-        };
-
-        var deepLearningData = {
-          labels: ["CNN", "RNN", "LSTM", "GAN", "Autoencoders"],
-          datasets: [{
-            data: [90, 70, 90, 55, 55],
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
-          }]
-        };
-
-        var dataVizData = {
-          labels: ["Pandas", "Numpy", "Matplotlib", "Seaborn", "ggplot2"],
-          datasets: [{
-            data: [95, 95, 90, 90, 50],
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
-          }]
-        };
-
-        var mlopsData = {
-          labels: ["Docker & Kubernetes", "Gradio", "Weights & Biases", "Amazon SageMaker"],
-          datasets: [{
-            data: [95, 70, 50, 40],
-            backgroundColor: ["#4BC0C0", "#FF6384", "#36A2EB", "#FFCE56"],
-          }]
-        };
-
-        var cplatformData = {
-          labels: ["AWS (S3, Lambda, ECR)", "GCP (Dialogflow)"],
-          datasets: [{
-            data: [90, 40],
-            backgroundColor: ["#FF6384", "#36A2EB"],
-          }]
-        };
-
-        var bigDataToolsData = {
-          labels: ["Apache Hadoop", "Apache Spark", "Hive"],
-          datasets: [{
-            data: [90, 50, 40],
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-          }]
-        };
-
-        // Chart configurations
-        var chartConfig = {
-          type: 'pie',
-          options: {
-            legend: {
-              position: 'top',
-            },
-            responsive: false,
-            maintainAspectRatio: true,
-          },
-        };
-
-        // Create charts
-        var programmingChart = new Chart(document.getElementById("programmingChart"), Object.assign({}, chartConfig, {
-          data: programmingData,
-        }));
-
-        var mlChart = new Chart(document.getElementById("mlChart"), Object.assign({}, chartConfig, {
-          data: mlData,
-        }));
-
-        var nlpChart = new Chart(document.getElementById("nlpChart"), Object.assign({}, chartConfig, {
-          data: nlpData,
-        }));
-
-        var deepLearningChart = new Chart(document.getElementById("deepLearningChart"), Object.assign({}, chartConfig, {
-          data: deepLearningData,
-        }));
-
-        var dataVizChart = new Chart(document.getElementById("dataVizChart"), Object.assign({}, chartConfig, {
-          data: dataVizData,
-        }));
-
-        var mlopsChart = new Chart(document.getElementById("mlopsChart"), Object.assign({}, chartConfig, {
-          data: mlopsData,
-        }));
-
-        var cplatformChart = new Chart(document.getElementById("cplatforms"), Object.assign({}, chartConfig, {
-          data: cplatformData,
-        }));
-
-        var bigDataToolsChart = new Chart(document.getElementById("bigDataTools"), Object.assign({}, chartConfig, {
-          data: bigDataToolsData,
-        }));
-
-      };
-    });
-
-    function updateProgressBar(id, value) {
-      var progressBar = document.getElementById(id);
-      progressBar.style.width = value + '%';
-      progressBar.innerHTML = value + '%';
-    }
-
+    
   </script>
 
 </body>

@@ -2,37 +2,19 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Projects</title>
-  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  <!-- Include External JavaScript Script -->
+  <script src="resources/scripts/projects-script.js" defer></script>
+  <!-- Include External CSS -->
+  <link rel="stylesheet" href="resources/stylesheets/projects-css.css">
 
-    .content {
-      flex: 1;
-    }
-
-    .pdf-container {
-      max-width: 100%;
-      height: 500px; /* Adjust the height as needed */
-    }
-
-    .card-img-top {
-        height: 200px; /* Adjust the height as needed */
-        object-fit:cover; /* This ensures the image covers the entire space without stretching */
-    }
-  </style>
 </head>
 
 <body>
@@ -186,58 +168,6 @@
 
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    // Define the PDF URLs
-    const pdfPaths = [
-      'resources/pdfs/project_1.pdf',
-      'resources/pdfs/project_2.pdf',
-      'resources/pdfs/project_3.pdf'
-    ];
-  
-    // Function to open the PDF in an iframe
-    function openPdfInIframe(pdfUrl) {
-      const iframe = document.createElement('iframe');
-      iframe.src = pdfUrl;
-      iframe.width = '70%';
-      iframe.height = '80%';
-      iframe.frameBorder = '0';
-  
-      // Create a modal overlay
-      const modalOverlay = document.createElement('div');
-      modalOverlay.style.position = 'fixed';
-      modalOverlay.style.top = '0';
-      modalOverlay.style.left = '0';
-      modalOverlay.style.width = '100%';
-      modalOverlay.style.height = '100%';
-      modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-      modalOverlay.style.display = 'flex';
-      modalOverlay.style.alignItems = 'center';
-      modalOverlay.style.justifyContent = 'center';
-      modalOverlay.appendChild(iframe);
-  
-      // Append the overlay to the body
-      document.body.appendChild(modalOverlay);
-  
-      // Close the modal on click outside the iframe
-      modalOverlay.addEventListener('click', () => {
-        document.body.removeChild(modalOverlay);
-      });
-    }
-  
-    document.addEventListener('DOMContentLoaded', function () {
-      // Attach the function to the buttons
-      pdfPaths.forEach((pdfPath, index) => {
-        const buttonId = `openPdfButton${index + 1}`;
-        const openPdfButton = document.getElementById(buttonId);
-        if (openPdfButton) {
-          openPdfButton.addEventListener('click', () => openPdfInIframe(pdfPath));
-        } else {
-          console.error(`Button with id ${buttonId} not found.`);
-        }
-      });
-    });
-  </script>
 
 </body>
 
