@@ -7,3 +7,7 @@ body {
 .content {
 flex: 1;
 }
+.card-img-top {
+  height: 200px; /* Adjust the height as needed */
+  object-fit:cover; /* This ensures the image covers the entire space without stretching */
+}

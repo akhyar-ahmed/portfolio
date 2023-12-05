@@ -9,7 +9,7 @@ const pdfPaths = [
     function openPdfInIframe(pdfUrl) {
     const iframe = document.createElement('iframe');
     iframe.src = pdfUrl;
-    iframe.width = '70%';
+    iframe.width = '60%';
     iframe.height = '80%';
 
     // Create a modal overlay

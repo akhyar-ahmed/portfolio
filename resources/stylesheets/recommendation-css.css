@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Adjust the background color as needed */
+}
+
+.content {
+  flex: 1;
+  position: relative;
+}
+
+.jumbotron {
+  background-color: #fff; /* Adjust the background color of the content area */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#letterContainer {
+  background-color: #fff; /* Adjust the background color of the letter container */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.thumbs-up {
+  font-size: 15rem; /* Adjust the size of the thumbs-up icon */
+  color: #007bff; /* Adjust the color of the thumbs-up icon */
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  opacity: 0.5; /* Adjust the opacity value as needed */
+  pointer-events: none; /* Ensure that the icon doesn't interfere with clicks */
+  z-index: -1; /* Place the icon behind other elements */
+  transform: rotate(-15deg); /* Rotate the icon clockwise by 15 degrees */
+
+}
