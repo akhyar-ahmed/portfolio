@@ -1,6 +1,6 @@
 // Language Proficiency Progress
 document.addEventListener('DOMContentLoaded', function () {
-    updateProgressBar('englishProgress', 80); // Adjust the proficiency percentage
+    updateProgressBar('englishProgress', 90); // Adjust the proficiency percentage
     updateProgressBar('germanProgress', 30); // Adjust the proficiency percentage
     updateProgressBar('banglaProgress', 100); // Adjust the proficiency percentage
 
