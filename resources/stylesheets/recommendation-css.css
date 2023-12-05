@@ -3,6 +3,11 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #f8f9fa; /* Adjust the background color as needed */
+  user-select: none;
+}
+
+canvas {
+  pointer-events: none; /* Disable mouse events on canvas */
 }
 
 .content {
@@ -11,14 +16,14 @@ body {
 }
 
 .jumbotron {
-  background-color: #fff; /* Adjust the background color of the content area */
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust the background color and opacity of the content area */
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
 }
 
 #letterContainer {
-  background-color: #fff; /* Adjust the background color of the letter container */
+  background-color: rgba(255, 255, 255, 0.0);
   border-radius: 10px;
   padding: 20px;
 }
@@ -26,12 +31,12 @@ body {
 .thumbs-up {
   font-size: 15rem; /* Adjust the size of the thumbs-up icon */
   color: #007bff; /* Adjust the color of the thumbs-up icon */
-  position: absolute;
+  position: relative;
   bottom: 10%;
   right: 20%;
+  left: 50%;
   opacity: 0.5; /* Adjust the opacity value as needed */
   pointer-events: none; /* Ensure that the icon doesn't interfere with clicks */
   z-index: -1; /* Place the icon behind other elements */
   transform: rotate(-15deg); /* Rotate the icon clockwise by 15 degrees */
-
 }
