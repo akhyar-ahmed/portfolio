@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akhyar's Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Include External JavaScript Script -->
+  <!-- <script src="resources/scripts/achivement-script.js" defer></script> -->
+  <!-- Include External CSS -->
+  <link rel="stylesheet" href="resources/stylesheets/achievement-css.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Akhyar Ahmed</a>
+            <!-- Toggler button for mobile navigation -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <!-- Replace "#" with the appropriate section IDs in your actual page -->
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="recommendations.html">Recommendations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Social Media Icons -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/ak-ahmed/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/akhyar-ahmed" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.discordapp.com/users/718133096830206014/" target="_blank"><i class="fab fa-discord"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/_croods_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <!-- Achievement Section -->
+        <section id="achievements" class="bg-light py-5">
+            <div class="container">
+                <h1 class="text-center mb-4">Achievements</h2>
+                <hr class="my-4">
+                <!-- Interactive Modal Icon -->
+                <div class="modal-icon">
+                    <i class="fas fa-award" data-bs-toggle="modal" data-bs-target="#achievementModal"></i>
+                </div>
+        
+                <!-- Achievement Modal -->
+                <div class="modal fade" id="achievementModal" tabindex="-1" role="dialog" aria-labelledby="achievementModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="achievementModalLabel">Gold Medalist</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="text-center">Achieved the esteemed distinction of being awarded a gold medal during the 3rd convocation of Leading University, recognizing my outstanding academic performance in the Computer Science and Engineering Department from 2012 to 2017. This accolade marks the pinnacle of excellence, symbolizing dedication and superior achievement in my academic journey.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Achievement Details -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Gold Medalist</h5>
+                                <p>Issued by Leading University, Stlhet, Bangladesh</p>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#achievementModal" style="text-decoration: underline;">See More...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Akhyar Ahmed. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
