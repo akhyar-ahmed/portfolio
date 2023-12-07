@@ -1,14 +1,23 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    user-select: none;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  user-select: none;
+}
 
 .content {
-flex: 1;
+  flex: 1;
 }
+
 .card-img-top {
-  height: 200px; /* Adjust the height as needed */
+  height: 220px; /* Adjust the height as needed */
   object-fit:cover; /* This ensures the image covers the entire space without stretching */
+}
+
+.timeline-body p {
+  text-align: justify;
+}
+
+#about p{
+  text-align: justify;
 }
