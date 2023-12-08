@@ -12,3 +12,8 @@ body {
 .card-text {
     text-align: justify;
 }
+
+.card-img-top {
+    height: 300px; /* Adjust the height as needed */
+    object-fit: cover; /* This ensures the image covers the entire space without stretching */
+}
