@@ -35,7 +35,7 @@
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="recommendations.html">Recommendations</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li> -->
           <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
@@ -306,6 +306,46 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <!-- Image Carousel -->
+          <div id="imageCarousel_1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Image 1 -->
+              <div class="carousel-item active">
+                <img src="resources/images/project_6_1.jpg" class="d-block w-100" alt="Image 1">
+                <p>Initial state: File upload.</p>
+              </div>
+              <!-- Image 2 -->
+              <div class="carousel-item">
+                <img src="resources/images/project_6_2.jpg" class="d-block w-100" alt="Image 2">
+                <p>Upload a file (.mp3/wav) and select languages.</p>
+                
+              </div>
+              <!-- Image 3 -->
+              <div class="carousel-item">
+                <img src="resources/images/project_6_3.jpg" class="d-block w-100" alt="Image 3">
+                <p>Results of file upload on their respective sections!</p>
+              </div>
+              <!-- Image 4 -->
+              <div class="carousel-item">
+                <img src="resources/images/project_6_4.jpg" class="d-block w-100" alt="Image 4">
+                <p>Initial state: Website streaming.</p>
+              </div>
+              <!-- Image 5 -->
+              <div class="carousel-item">
+                <img src="resources/images/project_6_5.jpg" class="d-block w-100" alt="Image 5">
+                <p>Results of streaming data!</p>
+              </div>
+              <!-- Previous and Next buttons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel_1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel_1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
           <!-- Project details and links -->
           <p>This project is a sophisticated integration of three advanced technologies: Whisper ASR, Facebook’s m2m100 model, and Nvidia’s NeMo. Each of these components plays a crucial role in the pipeline.</p>
           <p>OpenAI's Whisper ASR: This is the first step in the pipeline. It takes speech from various sources such as microphones, MP3 files, or live audio streams, and transcribes them into text. This is particularly useful in scenarios like transcribing lectures, meetings, or interviews in real-time.</p>
@@ -313,41 +353,6 @@
           <p>Nvidia’s NeMo: The final step in the pipeline is text-to-speech synthesis. The translated text is converted back into speech, producing audio streams or audio files. This can be used to generate multilingual podcasts, voiceovers for videos, or even for accessibility purposes, aiding those with reading difficulties or visual impairments.</p>
           <p>The integration of these three services in a sequential pipeline makes my project a comprehensive solution for multilingual speech processing. It has the potential to revolutionize communication in our increasingly global and digital world, making information more accessible and interactions more inclusive. Whether it’s for business meetings, educational content, customer service, or personal use, your project opens up a world of possibilities. It truly embodies the spirit of innovation and the power of technology to bring people together.</p>
 
-          <!-- Image Carousel -->
-          <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <!-- Image 1 -->
-              <div class="carousel-item active">
-                <img src="resources/images/project_5_1.jpg" class="d-block w-100" alt="Image 1">
-                <div class="carousel-caption d-none d-md-block">
-                  <p>Initial State.</p>
-                </div>
-              </div>
-              <!-- Image 2 -->
-              <div class="carousel-item">
-                <img src="resources/images/project_5_2.jpg" class="d-block w-100" alt="Image 2">
-                <div class="carousel-caption d-none d-md-block">
-                  <p>Test with a NEGATIVE Tweet.</p>
-                </div>
-              </div>
-              <!-- Image 3 -->
-              <div class="carousel-item">
-                <img src="resources/images/project_5_3.jpg" class="d-block w-100" alt="Image 3">
-                <div class="carousel-caption d-none d-md-block">
-                  <p>Test with a POSITIVE Tweet.</p>
-                </div>
-              </div>
-              <!-- Previous and Next buttons -->
-              <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -6,60 +6,24 @@ const pdfPaths = [
     'resources/pdfs/project_4.pdf'
     ];
 
-    // Function to open the PDF in an iframe
-    function openPdfInIframe(pdfUrl) {
-        const iframe = document.createElement('iframe');
-        iframe.src = pdfUrl;
-        iframe.width = '60%';
-        iframe.height = '80%';
+// JavaScript to toggle the visibility of the recommendation letter
+document.getElementById('openPdfButton1').addEventListener('click', function () {
+    window.open('resources/pdfs/project_1.pdf', '_blank');
+});
 
-        // Create a modal overlay
-        const modalOverlay = document.createElement('div');
-        modalOverlay.style.position = 'fixed';
-        modalOverlay.style.top = '0';
-        modalOverlay.style.left = '0';
-        modalOverlay.style.width = '100%';
-        modalOverlay.style.height = '100%';
-        modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-        modalOverlay.style.display = 'flex';
-        modalOverlay.style.alignItems = 'center';
-        modalOverlay.style.justifyContent = 'center';
 
-        modalOverlay.appendChild(iframe);
+// JavaScript to toggle the visibility of the recommendation letter
+document.getElementById('openPdfButton2').addEventListener('click', function () {
+    window.open('resources/pdfs/project_2.pdf', '_blank');
+});
 
-        // Append the overlay to the body
-        document.body.appendChild(modalOverlay);
+// JavaScript to toggle the visibility of the recommendation letter
+document.getElementById('openPdfButton3').addEventListener('click', function () {
+    window.open('resources/pdfs/project_3.pdf', '_blank');
+});
 
-        // Close the modal on click outside the iframe
-        modalOverlay.addEventListener('click', () => {
-            document.body.removeChild(modalOverlay);
-        });
-    }
+// JavaScript to toggle the visibility of the recommendation letter
+document.getElementById('openPdfButton4').addEventListener('click', function () {
+    window.open('resources/pdfs/project_4.pdf', '_blank');
+});
 
-    document.addEventListener('DOMContentLoaded', function () {
-        // Attach the function to the buttons
-        pdfPaths.forEach((pdfPath, index) => {
-            const buttonId = `openPdfButton${index + 1}`;
-            const openPdfButton = document.getElementById(buttonId);
-            if (openPdfButton) {
-            openPdfButton.addEventListener('click', () => openPdfInIframe(pdfPath));
-            } else {
-            console.error(`Button with id ${buttonId} not found.`);
-            }
-        });
-
-        // ---------------------- Event handler for project-5 -------------- //
-        // var imageCarousel = new bootstrap.Carousel(document.getElementById('imageCarousel'));
-        // // Add an event listener to the "See Demonstration" button
-        // var openPdfButton = document.getElementById('openPdfButton5');
-        // if (openPdfButton) {
-        // openPdfButton.addEventListener('click', function () {
-        //     // Manually trigger the modal
-        //     var myModal = new bootstrap.Modal(document.getElementById('project5Modal'));
-        //     myModal.show();
-        // });
-        // } else {
-        //     console.error('Button with id openPdfButton4 not found.');
-        // }
-        // ---------------------------- END ------------------------------ //
-    });
