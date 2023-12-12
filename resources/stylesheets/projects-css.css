@@ -15,7 +15,7 @@ body {
 }
 
 .card-img-top {
-    height: 250px; /* Adjust the height as needed */
+    height: 300px; /* Adjust the height as needed */
     object-fit: cover; /* This ensures the image covers the entire space without stretching */
 }
 
