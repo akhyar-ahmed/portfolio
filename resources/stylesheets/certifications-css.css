@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    user-select: none;
+}
+
+.content {
+    flex: 1;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.card-img-top {
+    height: 190px; /* Adjust the height as needed */
+    object-fit:cover; /* This ensures the image covers the entire space without stretching */
+}
+
+.card {
+    border-radius: 15px; /* Adjust as needed */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Adjust as needed */
+
+}

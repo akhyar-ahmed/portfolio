@@ -20,8 +20,10 @@ body {
 
 .card {
     height: 350px; /* Adjust this value as needed */
+    border-radius: 15px; /* Adjust as needed */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Adjust as needed */
   }
-
+  
 .navbar {
     position: sticky;
     top: 0;

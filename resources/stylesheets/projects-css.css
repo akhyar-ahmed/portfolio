@@ -15,7 +15,7 @@ body {
 }
 
 .card-img-top {
-    height: 280px; /* Adjust the height as needed */
+    height: 250px; /* Adjust the height as needed */
     object-fit: cover; /* This ensures the image covers the entire space without stretching */
 }
 
@@ -38,4 +38,10 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.card {
+    border-radius: 15px; /* Adjust as needed */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Adjust as needed */
+  
 }
